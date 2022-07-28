@@ -1,25 +1,25 @@
-package classes;
+// package classes;
 
 
-public class Aula1{
+// public class Aula1{
      
-    private int j = 0; // e um atributo
+//     private int j = 0; // e um atributo
 
-    public static void main(String[] args){
-        int i = 0; // i e var do metodo main
+//     public static void main(String[] args){
+//         int i = 0; // i e var do metodo main
         
-        Cachorro doguinho = new Cachorro(); //objeto doguinho
-                                //Construtor
-    }
+//         Cachorro doguinho = new Cachorro(); //objeto doguinho
+//                                 //Construtor
+//     }
 
 
-    private void soma(int a, int b ){
-        int i = 2; //i e var do metodo soma
-        int soma = a + b + i + j;
+//     private void soma(int a, int b ){
+//         int i = 2; //i e var do metodo soma
+//         int soma = a + b + i + j;
 
-    }
+//     }
 
-}
+// }
 
 // Midificador de Acesso
 
