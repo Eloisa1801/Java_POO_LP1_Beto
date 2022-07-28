@@ -24,8 +24,8 @@ public Cachorro(String name){
 // GETTERS-atribuir e SETTERS-
 
 //Nome
-public void setNome(String n){
-    this.nome = n;
+public void setNome(String nome){
+    this.nome = nome;
 }
 
 public String getNome(){
@@ -33,8 +33,8 @@ public String getNome(){
 }
 
 //Idade
-public void setIdade(int n){
-    this.idade = n;
+public void setIdade(int idade){
+    this.idade = idade;
 }
 
 public int getIdade(){
@@ -42,8 +42,8 @@ public int getIdade(){
 }
 
 //Raca
-public void setRaca(String n){
-    this.raca = n;
+public void setRaca(String raca){
+    this.raca = raca;
 }
 
 public String getRaca(){
@@ -51,8 +51,8 @@ public String getRaca(){
 }
 
 //Dono
-public void setDono(boolean n){
-    this.dono = n;
+public void setDono(boolean dono){
+    this.dono = dono;
 }
 
 public boolean geDono(){
@@ -60,8 +60,8 @@ public boolean geDono(){
 }
 
 //Castrado
-public void setCastrado(boolean n){
-    this.castrado = n;
+public void setCastrado(boolean castrado){
+    this.castrado = castrado;
 }
 
 public boolean getCastrado(){
@@ -69,8 +69,8 @@ public boolean getCastrado(){
 }
 
 //Peso
-public void setPeso(double n){
-    this.peso = n;
+public void setPeso(double peso){
+    this.peso = peso;
 }
 
 public double getPeso(){
