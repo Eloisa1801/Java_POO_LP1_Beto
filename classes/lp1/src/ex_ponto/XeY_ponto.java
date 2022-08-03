@@ -35,7 +35,7 @@ public class XeY_ponto {
 
     public double distance(XeY_ponto p1, XeY_ponto p2) {
         double d = Math.pow((p1.x - p2.x), 2) + Math.pow((p1.y - p2.y), 2);
-        System.out.println(d);
+        System.out.println(Math.sqrt(d));
         return Math.sqrt(d);
     }
 
