@@ -1,4 +1,4 @@
-package classes.ProjetoPoo.src.ex_ponto;
+package ProjetoPoo.src.ex_ponto;
 
 public class Robo {
     XeY_ponto position;
