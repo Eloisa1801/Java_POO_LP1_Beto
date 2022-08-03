@@ -1,4 +1,4 @@
-package ex_ponto;
+package classes.ProjetoPoo.src.ex_ponto;
     
 
 public class XeY_ponto {

@@ -1,4 +1,5 @@
-import ex_ponto.XeY_ponto;
+package classes.ProjetoPoo.src;
+import classes.ProjetoPoo.src.ex_ponto.XeY_ponto;
 
 public class App {
     public static void main(String[] args) throws Exception{
