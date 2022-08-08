@@ -9,13 +9,12 @@ public class InitOrdenacao {
         
         //Fazer a leitura pelo teclado
         Scanner in = new Scanner(System.in);
-        //classe   - comando -contrutor da clsse - parametro para leitura
+        //classe nome_objeto = comando -contrutor da clsse (parametro para leitura)
        
-        int vetor[] = new int[10];
-
-        // int vetor2[] = {1, 2, 3, 4, 5, 6, 7, 8};
-
-        // int matriz[][] = new int[3][3];
+        //Declaração dos vetores e matrizes JAVA
+        int vetor[] = new int[5];
+        int vetor2[] = {1, 2, 3, 4, 5, 6, 7, 8};
+        int matriz[][] = new int[3][3];
 
         // vetor[2] = 30;
         // vetor2[0] = 10;
@@ -35,69 +34,39 @@ public class InitOrdenacao {
 //-----------------------------------------------------------------\\---------------------------------\\
         // int num =  1 + ((int) (Math.random()) * 10);
 
-        int min = 10, max = 20;
+        //Random
+
+        int min = 2, max = 10;
         Random rand = new Random();
         // System.out.println(rand.nextInt(max - min) + min);
-
+        
+        //ERRO
         // for (int i = 0; i < 5; i++) {
             
-        //     System.out.println("Vetor " + i + " - " + rand.nextInt(max - min) + min );
-            
-        // }
-        
-        // System.out.println("\n");
-
-        // for (int i = 0; i < 8; i++) {
-            
-        //     System.out.println("Vetor " + i + " - " + rand.nextInt(max - min) + min );
+        // System.out.println("vetor[" + i + "] = " + rand.nextInt(max - min) + min );
             
         // }
 
-        // System.out.println("\n");
+        //CERTO
 
-        // for (int i = 0; i < 8; i++) {
-            
-            
-
-        // Continuar colocar numeros  aleatorios no vetor e na matriz 3x3
-
-        // for (int i = 0; i < 8; i++) {
-        //     System.out.println(vetor2[i]);
-            
-        // }
-
-        // Criar um vetor de sem repetir 10 a 20
-        int qto = 0;
-
-        for (int i = 0; i < 10; i++) {
-            boolean found = true;
-            int temp = 0;
-            while (found) {
-                found = false;
-                temp = rand.nextInt(max - min) + min;
-                for (int j = 0; j < qto; j++) {
-                    if (temp == vetor[j]) {
-                        found = true;
-                    }
-                }
-            }
-            vetor[i] = temp;
-            System.out.println(temp + "");
-            qto++;
+        System.out.println("\nVetor: ");
+        for (int i = 0; i < 5; i++) {
+            vetor[i] = rand.nextInt(max - min) + min;
+            System.out.println("[" + i + "] = " + vetor[i]);
         }
 
-        
+        System.out.println("\nVetor2: ");
+        for (int i = 0; i < 8; i++) {
+            vetor2[i] = rand.nextInt(max - min) + min;
+            System.out.println("[" + i + "] = " + vetor2[i]);
+        }
 
-
-
-//-----------------------------------------------------------------\\---------------------------------\\
-
-
-
-
-
-
-
+        System.out.println("\nMatriz:");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                matriz[i][j] = rand.nextInt(max - min) + min;
+                System.out.println("[" + i + "][" + j + "] = " + matriz[i][j]);
+            }
+        }
     }
-
 }
