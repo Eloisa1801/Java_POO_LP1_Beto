@@ -18,7 +18,7 @@ public class selectionSort {
 
         for (int i = 0; i < TAM; i++){
             int menor = i;
-            for (int j = 0; j < TAM; j++){
+            for (int j = i; j < TAM; j++){
                 if (vetor[j] < vetor[menor]){
                     menor = j;
                 }
