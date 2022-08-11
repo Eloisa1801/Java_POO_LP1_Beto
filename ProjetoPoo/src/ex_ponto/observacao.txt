@@ -1,0 +1,21 @@
+estrutura de dados
+
+---Herança----
+
+Reuso de codigo
+
+Super classe
+
+
+        animal terrestre
+        #Raca:String
+        #Nome:String
+        ------------
+        +EmitirSom():void
+            |
+            |
+    ----Extends----
+    |             |         |
+
+   cat           dog      tubarao 
+
