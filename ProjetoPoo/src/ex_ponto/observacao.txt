@@ -19,3 +19,8 @@ Super classe
 
    cat           dog      tubarao 
 
+
+
+   vazio - agregação
+   
+
