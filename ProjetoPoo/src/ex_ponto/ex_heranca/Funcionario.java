@@ -1,10 +1,10 @@
 package ProjetoPoo.src.ex_ponto.ex_heranca;
 
-
+import java.time.LocalDate;
 
 public class Funcionario extends Pessoa {
     private String matricula;
-    private String dtEntrada;
+    private LocalDate dtAdmissao;
     private String cargo;
     
     public String getMatricula() {
@@ -15,13 +15,13 @@ public class Funcionario extends Pessoa {
         this.matricula = matricula;
     }
 
-    public String getDtEntrada() {
-        return this.dtEntrada;
+    public LocalDate getDtAdmissao() {
+        return this.dtAdmissao;
     }
 
-    public void setDtEntrada(String dtEntrada) {
-        this.dtEntrada = dtEntrada;
-    }
+    public void setDtAdmissao(LocalDate dtAdmissao) {
+        this.dtAdmissao = dtAdmissao;
+    }    
 
     public String getCargo() {
         return this.cargo;
@@ -29,5 +29,10 @@ public class Funcionario extends Pessoa {
 
     public void setCargo(String cargo) {
         this.cargo = cargo;
+    }
+
+    @Override
+    public String toString() {
+        return "Funcionario: " + this.matricula;
     }
 }

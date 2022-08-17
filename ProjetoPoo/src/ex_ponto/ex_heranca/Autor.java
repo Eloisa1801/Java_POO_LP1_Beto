@@ -9,9 +9,8 @@ public class Autor extends Pessoa {
 
     public Autor(String nome, LocalDate dtNascimento, String endereco, String formacao, int qtoLivro) {
        super(nome, dtNascimento, endereco);
-        this.nome = nome;
-        this.endereco = endereco;
-        this.dtNascimento = dtNascimento; 
+        this.formacao = formacao;
+        this.qtoLivro = qtoLivro; 
     }
 
 
@@ -31,7 +30,10 @@ public class Autor extends Pessoa {
         this.qtoLivro = qtoLivro;
     }
 
-
+    @Override
+    public String toString() {
+        return "Formação: " + this.formacao;
+    }
     
 
 }

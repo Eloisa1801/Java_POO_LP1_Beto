@@ -32,4 +32,9 @@ public class Estudante extends Pessoa {
     public void setDtInicio(LocalDate dtInicio) {
         this.dtInicio = dtInicio;
     }
+
+    @Override
+    public String toString() {
+        return "Ra: " + this.ra;
+    }
 }

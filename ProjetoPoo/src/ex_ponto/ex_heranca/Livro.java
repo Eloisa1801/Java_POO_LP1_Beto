@@ -1,9 +1,11 @@
 package ProjetoPoo.src.ex_ponto.ex_heranca;
 
+import java.time.LocalDate;
+
 public class Livro {
     private String titulo;
     private String editora;
-    private String dtLancamento;
+    private LocalDate dtLancamento;
 
 
     public Livro(String titulo){
@@ -27,12 +29,18 @@ public class Livro {
         this.editora = editora;
     }
 
-    public String getDtLancamento() {
+    public LocalDate getDtLancamento() {
         return this.dtLancamento;
     }
 
-    public void setDtLancamento(String dtLancamento) {
+    public void setDtLancamento(LocalDate dtLancamento) {
         this.dtLancamento = dtLancamento;
     }
+
+    @Override
+    public String toString() {
+        return "Titulo: " + this.titulo;
+    }
+    
 
 }
