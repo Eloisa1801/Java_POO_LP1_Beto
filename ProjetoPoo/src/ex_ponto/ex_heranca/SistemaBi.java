@@ -24,8 +24,8 @@ public class SistemaBi {
 
     };
 
-    private static List<livros>livros = new ArrayList<livros>();
-    private static List<autores>autores = new ArrayList<autores>();
+    // private static List<Livros> livros = new ArrayList<Livros>();
+    // private static List<Autores> autores = new ArrayList<Autores>();
 
 
     private static Scanner buffer = new Scanner(System.in);
@@ -38,13 +38,14 @@ public class SistemaBi {
             System.out.print("\n\n");
             op = buffer.nextInt();
             escolha(op);
+            System.in.read();//System("pause")
         }
             
     }
 
     // ====================================================================================
     private static void printMenu() {
-        System.out.print("\033[H\033{23");
+        System.out.print("\033[H\033[2j");
         System.out.flush();
         for (String op : opcoes) {
             System.out.println(op);
@@ -63,8 +64,9 @@ public class SistemaBi {
                 break;
 
             //cadastrar funcionario
-            case 2:
-                Funcionario novoFunc = new Funcionario.cadastrarFuncionario();
+            // case 2:
+            //     Funcionario novoFunc = new Funcionario.cadastrarFuncionario();
+            // 
             default:
                 System.out.println("Saindo da função escolha");
 
