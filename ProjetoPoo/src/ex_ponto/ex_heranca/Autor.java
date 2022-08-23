@@ -4,13 +4,13 @@ import java.time.LocalDate;
 
 public class Autor extends Pessoa {
     private String formacao;
-    private int qtoLivro;//nunca armazenar isso
+    private int qtoLivros;//nunca armazenar isso
 
 
-    public Autor(String nome, LocalDate dtNascimento, String endereco, String formacao, int qtoLivro) {
+    public Autor(String nome, LocalDate dtNascimento, String endereco, String formacao, int qtoLivros) {
        super(nome, dtNascimento, endereco);
         this.formacao = formacao;
-        this.qtoLivro = qtoLivro; 
+        this.qtoLivros = qtoLivros; 
     }
 
 
@@ -23,17 +23,17 @@ public class Autor extends Pessoa {
     }
 
     public int getQtoLivro() {
-        return this.qtoLivro;
+        return this.qtoLivros;
     }
 
     public void setQtoLivro(int qtoLivro) {
-        this.qtoLivro = qtoLivro;
+        this.qtoLivros = qtoLivro;
     }
 
-    @Override
-    public String toString() {
-        return "Formação: " + this.formacao;
-    }
+    // @Override
+    // public String toString() {
+    //     return "Formação: " + this.formacao;
+    // }
     
 
 }

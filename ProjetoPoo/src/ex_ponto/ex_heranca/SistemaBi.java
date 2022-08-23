@@ -60,7 +60,7 @@ public class SistemaBi {
                 Livro novoLivro = Livro.cadastrarLivro();
                 System.out.println("Livro cadastrado!\nResumo...\n");
                 System.out.println(novoLivro.toString());
-                livros.add(novoLivro);
+                // livros.add(novoLivro);
                 break;
 
             //cadastrar funcionario
