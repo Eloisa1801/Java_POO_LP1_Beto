@@ -24,8 +24,9 @@ public class SistemaBi {
 
     };
 
-    // private static List<Livros> livros = new ArrayList<Livros>();
+    private static List<Livro> livros = new ArrayList<Livro>();
     // private static List<Autores> autores = new ArrayList<Autores>();
+    private static List<Funcionario> funcionarios = new ArrayList<Funcionario>();
 
 
     private static Scanner buffer = new Scanner(System.in);
@@ -60,13 +61,16 @@ public class SistemaBi {
                 Livro novoLivro = Livro.cadastrarLivro();
                 System.out.println("Livro cadastrado!\nResumo...\n");
                 System.out.println(novoLivro.toString());
-                // livros.add(novoLivro);
+                livros.add(novoLivro);
                 break;
 
             //cadastrar funcionario
-            // case 2:
-            //     Funcionario novoFunc = new Funcionario.cadastrarFuncionario();
-            // 
+            case 2:
+                Funcionario novoFunc = new Funcionario.cadastrarFuncionario();
+                System.out.println("Novo funcionário cadastrado!\nResumo...\n");
+                System.out.println(novoFuncionario.toString());
+                funcionarios.add(novoFuncionarios);
+                break;
             default:
                 System.out.println("Saindo da função escolha");
 
