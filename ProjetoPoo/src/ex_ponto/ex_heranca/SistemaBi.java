@@ -12,13 +12,13 @@ public class SistemaBi {
             "|-----------------------------------------------------------------|",
             "|                      Escolha uma opção                          |",
             "|-----------------------------------------------------------------|",
-            "|1 - Cadastrar Livro                                              |",
-            "|2 - Cadastrar Funcionario                                        |",
-            "|3 - Cadastrar Estudante                                          |",
-            "|4 - Cadastrar Autor                                              |",
-            "|5 - Realizar Emprestimo                                          |",
-            "|6 - Receber Emprestimo                                           |",
-            "|0 - Sair                                                         |",
+            "| 1 - Cadastrar Livro                                             |",
+            "| 2 - Cadastrar Funcionario                                       |",
+            "| 3 - Cadastrar Estudante                                         |",
+            "| 4 - Cadastrar Autor                                             |",
+            "| 5 - Realizar Emprestimo                                         |",
+            "| 6 - Receber Emprestimo                                          |",
+            "| 0 - Sair                                                        |",
             "|                                                                 |",
             " -----------------------------------------------------------------",
 
@@ -28,7 +28,8 @@ public class SistemaBi {
     private static List<Funcionario> funcionarios = new ArrayList<Funcionario>();
     private static List<Estudante> estudantes = new ArrayList<Estudante>();
     private static List<Autor> autores = new ArrayList<Autor>();
-    // private static List<Emprestimo> emprestimos = new ArrayList<Emprestimo>();
+    private static List<Emprestimo> emprestimos = new ArrayList<Emprestimo>();
+    private static List<Emprestimo> devolucoes = new ArrayList<Emprestimo>();
 
     private static Scanner buffer = new Scanner(System.in);
 
@@ -45,6 +46,7 @@ public class SistemaBi {
     }
 
     // ====================================================================================
+    
     private static void printMenu() {
         System.out.print("\033[H\033[2j");
         System.out.flush();
@@ -54,6 +56,7 @@ public class SistemaBi {
     }
 
     // =====================================================================================
+    
     private static void escolha(int op) {
         switch (op) {
             // cadastrar Livro
@@ -90,11 +93,22 @@ public class SistemaBi {
 
             // Realizar emprestimo
             case 5:
-                Emprestimo novoEmprestimoRealizado = Emprestimo.realizarEmprestimo();
+                Emprestimo novoEmprestimoRealizado = Emprestimo.realizaEmprestimo();
                 System.out.println("Emprestimo realizado!\n");
                 System.out.println(novoEmprestimoRealizado.toString());
                 emprestimos.add(novoEmprestimoRealizado);
                 break;
+
+            case 6:
+                Emprestimo novoEmprestimoRecebido = Emprestimo.receberDevolucao();
+                System.out.println("Emprestimo recebido!\n");
+                System.out.println(novoEmprestimoRecebido.toString());
+                devolucoes.add(novoEmprestimoRecebido);
+                break;
+
+            case 0:
+                System.out.println("\nAté mais usuário\n");
+                System.exit(0);
 
             default:
                 System.out.println("Saindo da função escolha");
