@@ -1,6 +1,10 @@
 package ProjetoPoo.src.ex_ponto.ex_heranca;
 
+import java.time.DateTimeException;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
 
 public class Emprestimo {
     private Estudante estudante; //sempre encapsular os atributos
@@ -8,6 +12,12 @@ public class Emprestimo {
     private Livro livro;
     private LocalDate dtEmprestimo;
     private LocalDate dtDevolucao;
+
+      // ----
+      public Emprestimo(LocalDate dtEmprestimo) {
+        this.dtEmprestimo = dtEmprestimo;
+    }
+    // ---
 
 
     public Estudante getEstudante() {
@@ -49,5 +59,66 @@ public class Emprestimo {
     public void setDtDevolucao(LocalDate dtDevolucao) {
         this.dtDevolucao = dtDevolucao;
     }
+
+    @Override
+    public String toString() {
+        return ("Estudante:\t" + this.estudante + "\nFuncionario:\t" + this.funcionario + "\nLivro: \t" + this.livro + "\n Data do emprestimo: \t" + this.dtEmprestimo + "\nData da devolução: \t" + this.dtDevolucao);
+        // DaterTimeFormatter
+    }
+    // //Realizar emprestimo 
+    // public static Emprestimo realizaEmprestimo() {
+    //     Scanner in = new Scanner(System.in);
+    //     System.out.print("Digite o RA do estudante: ");
+    //     String ra = in.next();
+    //     if (ra.length() < 6){ 
+    //         System.out.println("O RA deve ter pelo menos 6 caracteres!");
+    //         return null;
+    //     }
+
+    //     Emprestimo novoEmprestimoRealizado = new Emprestimo(dtEmprestimo);
+    //     System.out.print("Digite o curso do Estudante: ");
+    //     novoEmprestimoRealizado.setDtEmprestimo(in.next());
+
+    //     System.out.print("Digite a data de Emprestmo (dd/mm/yyyy): ");
+    //     String data = in.next();
+
+    //     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
+
+    //     LocalDate novaData = LocalDate.parse(data, formatter);
+
+    //     System.out.println("Nova data = " + novaData.format(formatter));
+
+    //     novoEmprestimoRealizado.setDtEmprestimo(novaData);
+    //     return novoEmprestimoRealizado;
+
+    // }
+    // // Receber emprestimo
+
+    // public static Emprestimo realizaEmprestimo() {
+    //     Scanner in = new Scanner(System.in);
+    //     System.out.print("Digite o RA do estudante: ");
+    //     String ra = in.next();
+    //     if (ra.length() < 6){ 
+    //         System.out.println("O RA deve ter pelo menos 6 caracteres!");
+    //         return null;
+    //     }
+
+    //     Emprestimo novoEmprestimoRealizado = new Emprestimo(dtEmprestimo);
+    //     System.out.print("Digite o curso do Estudante: ");
+    //     novoEmprestimoRealizado.setDtEmprestimo(in.next());
+
+    //     System.out.print("Digite a data de Emprestmo (dd/mm/yyyy): ");
+    //     String data = in.next();
+
+    //     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
+
+    //     LocalDate novaData = LocalDate.parse(data, formatter);
+
+    //     System.out.println("Nova data = " + novaData.format(formatter));
+
+    //     novoEmprestimoRealizado.setDtEmprestimo(novaData);
+    //     return novoEmprestimoRealizado;
+
+    // }
 
 }

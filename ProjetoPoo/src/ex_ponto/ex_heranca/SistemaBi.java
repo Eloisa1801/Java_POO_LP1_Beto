@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class SistemaBi {
-    private final static String[] opcoes ={
+    private final static String[] opcoes = {
             " -----------------------------------------------------------------",
             "|                  +++ Sistema biblioteca +++                     |",
             "|-----------------------------------------------------------------|",
@@ -25,23 +25,23 @@ public class SistemaBi {
     };
 
     private static List<Livro> livros = new ArrayList<Livro>();
-    // private static List<Autores> autores = new ArrayList<Autores>();
     private static List<Funcionario> funcionarios = new ArrayList<Funcionario>();
-
+    private static List<Estudante> estudantes = new ArrayList<Estudante>();
+    private static List<Autor> autores = new ArrayList<Autor>();
+    // private static List<Emprestimo> emprestimos = new ArrayList<Emprestimo>();
 
     private static Scanner buffer = new Scanner(System.in);
 
-
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         int op = 1;
         while (op != 0) {
             printMenu();
             System.out.print("\n\n");
             op = buffer.nextInt();
             escolha(op);
-            System.in.read();//System("pause")
+            System.in.read();// System("pause")
         }
-            
+
     }
 
     // ====================================================================================
@@ -64,13 +64,38 @@ public class SistemaBi {
                 livros.add(novoLivro);
                 break;
 
-            //cadastrar funcionario
+            // cadastrar funcionario
             case 2:
-                Funcionario novoFunc = new Funcionario.cadastrarFuncionario();
-                System.out.println("Novo funcionário cadastrado!\nResumo...\n");
-                System.out.println(novoFuncionario.toString());
-                funcionarios.add(novoFuncionarios);
+                Funcionario novoFunc = Funcionario.cadastrarFunc();
+                System.out.println("Novo funcionário cadastrado!\n");
+                System.out.println(novoFunc.toString());
+                funcionarios.add(novoFunc);
                 break;
+
+            // cadastrar Estudante
+            case 3:
+                Estudante novoEstudante = Estudante.cadastrarEstudante();
+                System.out.println("Novo estudante cadastrado!\n");
+                System.out.println(novoEstudante.toString());
+                estudantes.add(novoEstudante);
+                break;
+
+            // cadastrar Autor
+            case 4:
+                Autor novoAutor = Autor.cadastrarAutor();
+                System.out.println("Novo autor cadastrado!\n");
+                System.out.println(novoAutor.toString());
+                autores.add(novoAutor);
+                break;
+
+            // Realizar emprestimo
+            case 5:
+                Emprestimo novoEmprestimoRealizado = Emprestimo.realizarEmprestimo();
+                System.out.println("Emprestimo realizado!\n");
+                System.out.println(novoEmprestimoRealizado.toString());
+                emprestimos.add(novoEmprestimoRealizado);
+                break;
+
             default:
                 System.out.println("Saindo da função escolha");
 

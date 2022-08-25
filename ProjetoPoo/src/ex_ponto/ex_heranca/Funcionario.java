@@ -9,6 +9,12 @@ public class Funcionario extends Pessoa {
     private String matricula;
     private LocalDate dtAdmissao;
     private String cargo;
+
+    // ----
+    public Funcionario(String matricula) {
+        this.matricula = matricula;
+    }
+    // ---
     
     public String getMatricula() {
         return this.matricula;
@@ -43,8 +49,8 @@ public class Funcionario extends Pessoa {
         Scanner in = new Scanner(System.in);
         System.out.print("Digite a matrícula do funcioário: ");
         String matricula = in.next();
-        if (matricula.length() < 6){
-            System.out.println("A matrícula deve ter 6 caracteres!");
+        if (matricula.length() < 6){ 
+            System.out.println("A matrícula deve ter pelo menos 6 caracteres!");
             return null;
         }
 
@@ -59,7 +65,7 @@ public class Funcionario extends Pessoa {
 
         LocalDate novaData = LocalDate.parse(data, formatter);
 
-        System.out.println("Novadata = " + novaData.format(formatter));
+        System.out.println("Nova data = " + novaData.format(formatter));
 
         novoFunc.setDtAdmissao(novaData);
         return novoFunc;
